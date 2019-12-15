@@ -1,2 +1,361 @@
 // This is where you can import other stylesheets or write your scss code
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* this is for all box inside html*/
+
+body {
+  font-family: "robot", helvetivca, sans-serif;
+  font-size: 1.25rem;
+  line-height: normal;
+  margin: 0 auto;
+}
+
+/*----------Navbar Beginn----------*/
+header {
+  width: 100%;
+  position: fixed;
+  // background-color: #222;
+  // z-index: 1;
+  padding-top: 1rem;
+  font-family: "robot", cursive;
+}
+
+header ul {
+  padding: 0 5rem;
+  margin: 0 auto;
+  list-style: none;
+}
+
+#logo {
+  float: left;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+ul li {
+  display: inline-block;
+  overflow: hidden;
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
+  /*text-decoration: none;*/
+}
+
+nav {
+  float: right;
+  /*text-align: center;*/
+}
+
+nav li a {
+  color: white;
+  font-weight: 700;
+  display: block;
+  padding: 11px 16px;
+  /*text-align: center;*/
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: orange;
+  color: #333;
+  border-radius: 15px;
+}
+
+/*----------Navbar finish----------*/
+
+.video_container {
+  display: flex;
+  justify-content: center;
+
+  /* background-image: url(../img/elements_logo.png);
+    background-size: 45% auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; */
+  height: 85vh;
+  width: 100%;
+  position: relative;
+  margin: 0px auto 0px;
+  overflow: hidden;
+}
+
+.rising_snow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 99%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+  position:absolute;
+  bottom: 10%;
+}
+
+.fa {
+}
+/*----------Section Banner beginn----------*/
+// #banner {
+//     background-color: #222;
+//     /*width: 100%;
+//     height: 100%;*/
+// }
+// .banner-wrapper {
+//     padding: 10rem 0;
+//     /* changing to higer level it take all written section down*/
+//     text-align: center;
+//     font-family: 'robot', cursive;
+// }
+
+#title {
+  font-size: 36px;
+  margin: 10px auto;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: orange;
+}
+
+#sub-title {
+  font-size: 30px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: orange;
+}
+/*----------Section Banner End----------*/
+
+/*Social Media beginn inside (section banner)/*/
+.round-button {
+  display: inline-block; /* because by default the list are displayed vertically, in addition inline block the top and buttom in margin and padding are respected*/
+  width: 70px;
+  height: 70px;
+  /*text-align: center;*/
+  border-radius: 50%;
+  color: #222;
+  text-decoration: none;
+  background: #fff;
+  margin: 0 20px;
+  border: 3px solid #222;
+  transition: background-color 1s, color 1s, border-color 0.1s;
+}
+.round-button i {
+  vertical-align: middle;
+  font-size: 3.75rem; /* the picture inside the social Media*/
+}
+.round-button:hover {
+  background-color: orange;
+  color: #fff;
+  border-color: #fff;
+}
+/*Social Media End*/
+
+/*----------Section About beginn----------*/
+
+.catagory {
+  margin-left: 20px; /* i used the samee class for three main title(About, Portfolio, and Contact)*/
+}
+#about {
+  padding-top: 4em; /* 100% width and height, so i can constrain the image into a specific position, either being too wide or too tall, respectively.*/
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: #222;
+  display: flex;
+}
+
+#profile {
+  float: right;
+  /*display: inline-block; the image is alraedy inline(maybe so we can control width and hight of the image but at the same time we use the text next picture we display block*/
+  height: 350px;
+  width: 300px;
+  /* when i make it small like 100px, the whole second page become smaller*/
+  margin: 0 20px;
+  padding: 5px 20px;
+}
+.content {
+  position: relative;
+  /*border:1px solid orange;*/
+  margin: 0 30px;
+  padding: 50px 0 20px 10px; /* padding dont work*/
+  font-family: "robot", cursive;
+  line-height: 25px;
+}
+/*----------Section About beginn----------*/
+
+/* section of portfolio beginn*/
+
+#portfolio {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  font-family: "robot", cursive;
+}
+
+#portfolio .wrapper h2 {
+  padding-top: 100px; /* i had to write it, otherwise the hash with will not work at portfolio section*/
+}
+
+.photography {
+  padding: 0 20px;
+  font-family: "robot", cursive;
+  color: orange;
+}
+
+.port-wrap {
+  font-size: 0;
+}
+
+/* i use font-size for thee main DIV, because it work with inline block for insidw DIV for image*/
+
+.port-item {
+  display: inline-block;
+  width: 32.3%;
+  margin: 0.5%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: box-shadow 1s;
+}
+
+.port-item img {
+  height: 100%;
+  width: 100%;
+}
+
+.port-item:hover {
+  box-shadow: 0px 0px 20px #fff;
+}
+
+.opacity {
+  opacity: 0.3;
+}
+.opacity:hover {
+  opacity: 1;
+}
+
+/* section of portfolio End*/
+
+/* section contact beginn*/
+#contact {
+  padding-top: 60px;
+  font-family: "robot", cursive;
+  margin-bottom: 100px;
+}
+.contact-form {
+  margin: 0 auto;
+  width: 60%;
+  height: 100%;
+  color: #222;
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.span-half {
+  max-width: 48%;
+  display: block;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.contact-form label {
+  font-size: 1.5em;
+}
+
+.contact-form span {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+}
+
+.contact-form textarea {
+  margin-top: 2px;
+  height: 150px;
+}
+
+input,
+textarea:focus {
+  /* border: solid 1px blue;*/
+  color: blue;
+}
+
+/*button,
+input {
+    line-height: normal;
+}*/
+
+textarea,
+input {
+  padding: 1em;
+}
+
+.button {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  /*clear: both;*/
+  /*list-style: none;*/
+  background-color: black;
+  /*border: none;*/
+  border-radius: 10px;
+  color: orange;
+  font-size: 30px;
+  margin: 0 10px 0 0;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  width: 200px;
+}
+.button:hover {
+  background-color: forestgreen;
+}
+
+/* section contact End*/
+
+/*----------Footer Styles----------*/
+
+footer {
+  height: 100%;
+  width: 100%;
+  background-color: #222;
+  text-align: center;
+  font-size: 20px;
+  font-family: "robot", cursive;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+footer.button-wrapper {
+  margin: 20px;
+}
