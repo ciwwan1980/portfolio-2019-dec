@@ -12,16 +12,20 @@ html {
 /* this is for all box inside html*/
 
 body {
-  font-family: "robot", helvetivca, sans-serif;
+font-family: "Open Sans", sans-serif;
   font-size: 1.25rem;
   line-height: normal;
   margin: 0 auto;
 }
 
+h2,p{
+  font-family: "Open Sans", sans-serif;
+}
+
 /*----------Navbar Beginn----------*/
 header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   // background-color: #222;
   // z-index: 1;
   padding-top: 1rem;
@@ -76,16 +80,25 @@ li a:hover {
 .video_container {
   display: flex;
   justify-content: center;
-
+// background-color: black;
   /* background-image: url(../img/elements_logo.png);
     background-size: 45% auto;
     background-repeat: no-repeat;
     background-position: 50% 50%; */
-  height: 85vh;
+  height: 99vh;
   width: 100%;
   position: relative;
   margin: 0px auto 0px;
   overflow: hidden;
+}
+
+.video_container::after{
+  content: "";
+  width:100%; 
+  height: 100%;
+  background-color: black;
+  opacity: .9;
+  z-index: -1;
 }
 
 .rising_snow {
@@ -97,7 +110,13 @@ li a:hover {
   height: auto;
   min-height: 99%;
   transform: translateX(-50%) translateY(-50%);
-  z-index: -1;
+  z-index: -2;
+}
+.header-logo{
+
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 }
 
 .header-container {
@@ -107,10 +126,17 @@ li a:hover {
 
   flex-direction: column;
   position:absolute;
-  bottom: 10%;
+  bottom: 20%;
 }
 
 .fa {
+ 
+  // background-color: black;
+}
+
+a:link,a:visited,a:hover,a:active{
+
+  text-decoration: none;
 }
 /*----------Section Banner beginn----------*/
 // #banner {
@@ -145,34 +171,38 @@ li a:hover {
 
 /*Social Media beginn inside (section banner)/*/
 .round-button {
-  display: inline-block; /* because by default the list are displayed vertically, in addition inline block the top and buttom in margin and padding are respected*/
+  display: flex; /* because by default the list are displayed vertically, in addition inline block the top and buttom in margin and padding are respected*/
   width: 70px;
   height: 70px;
-  /*text-align: center;*/
+  text-align: center;
   border-radius: 50%;
-  color: #222;
+  color: #fff;
   text-decoration: none;
-  background: #fff;
+  // background: #fff;
   margin: 0 20px;
-  border: 3px solid #222;
+  border: 3px solid #fff;
+  
+ 
   transition: background-color 1s, color 1s, border-color 0.1s;
 }
 .round-button i {
   vertical-align: middle;
-  font-size: 3.75rem; /* the picture inside the social Media*/
+  margin: auto auto; 
+  font-size: 3rem; /* the picture inside the social Media*/
 }
 .round-button:hover {
-  background-color: orange;
+  // background-color: orange;
   color: #fff;
   border-color: #fff;
+  background-color: rgb(99, 97, 97);
 }
 /*Social Media End*/
 
 /*----------Section About beginn----------*/
 
-.catagory {
-  margin-left: 20px; /* i used the samee class for three main title(About, Portfolio, and Contact)*/
-}
+// .category {
+//   margin-left: 20px; /* i used the samee class for three main title(About, Portfolio, and Contact)*/
+// }
 #about {
   padding-top: 4em; /* 100% width and height, so i can constrain the image into a specific position, either being too wide or too tall, respectively.*/
   width: 100%;
